@@ -1,4 +1,3 @@
-
 function bankNotesWithCoins(n) {
 
     // notes
@@ -56,3 +55,4 @@ function bankNotesWithCoins(n) {
 bankNotesWithCoins(576.73);
 bankNotesWithCoins(4);
 bankNotesWithCoins(91.09);
+
