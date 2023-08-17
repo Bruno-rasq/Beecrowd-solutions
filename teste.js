@@ -1,14 +1,15 @@
 
-function TimeConvert(n){
+function ageTodays(n){
 
-    let hours = Math.floor(n / 3600);
-    let minu = Math.floor((n - (hours * 3600)) / 60);
-    let second = Math.floor(n % 60);
+    let age = Math.floor(n / 365);
+    let rest = (n - (365 * age));
 
-    console.log(`${hours.toFixed(0)}:${minu.toFixed(0)}:${second}`);
-   
+    let month = Math.floor(rest / 30);
+    let days = (rest - (30 * month));
+
+    console.log(age, month, days)
 }
 
-TimeConvert(556);
-TimeConvert(1);
-TimeConvert(140153);
+ageTodays(400);
+ageTodays(800);
+ageTodays(30);
