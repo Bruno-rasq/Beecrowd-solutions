@@ -1,39 +1,18 @@
 console.log(" 1022 - TDA rational");
 
-//adiantando algumas partes
+function test(str){
 
-/*
-    inpult format 
+    let split = str.split("+");
 
-    number / number, operador( +, -, *, /) number / number
-    n1/d1 operador( +, -, *, /)  n2/d2
+    let arry1 = split[0].split("/");
+    let [ n1, d1 ] = arry1.map(item => parseFloat(item));
 
-*/
+    let arry2 = split[1].split("/");
+    let [ n2, d2 ] = arry2.map(item => parseFloat(item));
 
-response = null;
-
-switch(operrador){
-    case '+':
-        response = (((n1 * d2) + (n2 * d1)) / (d1 * d2));
-        break;
-
-    case '-':
-        response = (((n1 * d2) - (n2 * d1)) / (d1 * d2));
-        break;
-
-    case '*':
-        response = ((n1 * n2) / (d1 * d2));
-        break;
-
-    case '/':
-        response = ((n1 * d2) / (n2 * d2));
-
+    console.log(str)
+    console.log(n1, n2, d1, d2)
+    
 }
 
-/*
-    resposta:
-
-    console.log(`${response} = ${simplify}`);
-    resposta da operação "=" simplificação da resposta ou caso não seja possivel a propria resposta
-
- */
+test("1/2 + 3/4");
