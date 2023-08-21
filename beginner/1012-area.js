@@ -14,19 +14,16 @@
 
 */
 
-let A = parseFloat(lines[0]);
-let B = parseFloat(lines[1]);
-let C = parseFloat(lines[2]);
-let pi = parseFloat(3.14159);
+let [A, B, C] = input.split(" ").map(item => parseFloat(item));
 
-let Triangle = ((A * C) / 2);
-let raio = ((C ** 2) * pi);
-let trapezium = (((A + B) * C) / 2);
-let square = (B ** 2);
-let rectangle = (A * B);
+let AreaTring = (A * C) / 2.0;
+let circle = parseFloat(3.14159) * Math.pow(C, 2);
+let trapezium = ((A + B) * C) / 2.0;
+let square = Math.pow(B, 2);
+let retangle = A * B;
 
-console.log(`TRIANGULO: ${Triangle.toFixed(3)}`);
-console.log(`CIRCULO: ${raio.toFixed(3)}`);
+console.log(`TRIANGULO: ${AreaTring.toFixed(3)}`);
+console.log(`CIRCULO: ${circle.toFixed(3)}`);
 console.log(`TRAPEZIO: ${trapezium.toFixed(3)}`);
 console.log(`QUADRADO: ${square.toFixed(3)}`);
-console.log(`RETANGULO: ${rectangle.toFixed(3)}`);
+console.log(`RETANGULO: ${retangle.toFixed(3)}`);
