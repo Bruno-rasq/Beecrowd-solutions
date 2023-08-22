@@ -11,39 +11,53 @@ let int = Number(lines.shift());
 
 // ----
 
-for(let i = 0; i < int; i++){
-    
-   let currentData = lines[i].split(/\s+/).join('');
+for (let i = 0; i < int; i++) {
 
-   let n1 = Number(currentData[0]);
-   let d1 = Number(currentData[2]);
-   let n2 = Number(currentData[4]);
-   let d2 = Number(currentData[6]);
+    let currentData = lines[i].split(/\s+/).join('');
 
-   let response = "";
-   
-   switch(currentData[3]){
+    let n1 = Number(currentData[0]);
+    let d1 = Number(currentData[2]);
+    let n2 = Number(currentData[4]);
+    let d2 = Number(currentData[6]);
+
+    let response = "";
+    let nom = null;
+    let den = null;
+
+    switch (currentData[3]) {
 
         case '+':
-            response = ((n1 * d2) + (n2 * d1)) + "/" + ( d1 * d2);
-            console.log(response);
+            nom = ((n1 * d2) + (n2 * d1));
+            den = (d1 * d2);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
             break;
 
         case '-':
-            response = ((n1 * d2) - (n2 * d1)) + "/" + ( d1 * d2);
-            console.log(response);
+            nom = ((n1 * d2) - (n2 * d1));
+            den = (d1 * d2);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
             break;
 
         case '*':
-            response = (n1 * n2) + "/" + ( d1 * d2);
-            console.log(response);
+            nom = (n1 * n2);
+            den = (d1 * d2);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
             break;
 
         case '/':
-            response = (n1 * d2) + "/" + (n2 * d1);
-            console.log(response);
+            nom = (n1 * d2);
+            den = (n2 * d1);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
             break;
 
         default:
-   };
+    };
 };

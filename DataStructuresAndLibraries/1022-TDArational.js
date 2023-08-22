@@ -1,32 +1,3 @@
-//adiantando algumas partes
-
-/*
-    inpult format 
-
-    number / number, operador( +, -, *, /) number / number
-    n1/d1 operador( +, -, *, /)  n2/d2
-
-*/
-
-response = null;
-
-switch(operrador){
-    case '+':
-        response = (((n1 * d2) + (n2 * d1)) / (d1 * d2));
-        break;
-
-    case '-':
-        response = (((n1 * d2) - (n2 * d1)) / (d1 * d2));
-        break;
-
-    case '*':
-        response = ((n1 * n2) / (d1 * d2));
-        break;
-
-    case '/':
-        response = ((n1 * d2) / (n2 * d2));
-
-}
 
 /*
     resposta:
@@ -36,19 +7,66 @@ switch(operrador){
 
 */
 
-function test(str){
+console.log(" 1022 - TDA rational ");
 
-    let split = str.split("+");
+let input = `4
+1 / 2 + 3 / 4
+1 / 2 - 3 / 4
+2 / 3 * 6 / 6
+1 / 2 / 3 / 4`
 
-    let arry1 = split[0].split("/");
-    let [ n1, d1 ] = arry1.map(item => parseFloat(item));
+let lines = input.split('\n');
+let int = Number(lines.shift());
 
-    let arry2 = split[1].split("/");
-    let [ n2, d2 ] = arry2.map(item => parseFloat(item));
+// ----
 
-    console.log(str)
-    console.log(n1, n2, d1, d2)
-    
-}
+for (let i = 0; i < int; i++) {
 
-test("1/2 + 3/4");
+    let currentData = lines[i].split(/\s+/).join('');
+
+    let n1 = Number(currentData[0]);
+    let d1 = Number(currentData[2]);
+    let n2 = Number(currentData[4]);
+    let d2 = Number(currentData[6]);
+
+    let response = "";
+    let nom = null;
+    let den = null;
+
+    switch (currentData[3]) {
+
+        case '+':
+            nom = ((n1 * d2) + (n2 * d1));
+            den = (d1 * d2);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
+            break;
+
+        case '-':
+            nom = ((n1 * d2) - (n2 * d1));
+            den = (d1 * d2);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
+            break;
+
+        case '*':
+            nom = (n1 * n2);
+            den = (d1 * d2);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
+            break;
+
+        case '/':
+            nom = (n1 * d2);
+            den = (n2 * d1);
+
+            response = nom + "/" + den;
+            console.log(response + " = ");
+            break;
+
+        default:
+    };
+};
