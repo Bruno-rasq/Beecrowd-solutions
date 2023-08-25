@@ -23,8 +23,7 @@ for (let i = 0; i < int; i++) {
     let response = "";
     let nom = null;
     let den = null;
-
-    let simplify = "";
+    let simp = null;
 
     switch (currentData[3]) {
 
@@ -33,21 +32,9 @@ for (let i = 0; i < int; i++) {
             den = (d1 * d2);
 
             response = `${nom}/${den}`;
+            simp = simplifyFrac(nom, den);
 
-            for(let i = Math.max(nom, den); i > 1; i--){
-                if ((nom % i == 0) && (den % i == 0)) {
-                    nom /= i;
-                    den /= i;
-                }
-            }
-
-            if(den === 1){
-                simplify = `${nom}`;
-            } else {
-                simplify = `${nom}/${den}`;
-            }
-
-            console.log(`${response} = ${simplify}`);
+            console.log(`${response} = ${simp}`);
             break;
 
         case '-':
@@ -55,21 +42,9 @@ for (let i = 0; i < int; i++) {
             den = (d1 * d2);
 
             response = `${nom}/${den}`;
+            simp = simplifyFrac(nom, den);
 
-            for(let i = Math.max(nom, den); i > 1; i--){
-                if ((nom % i == 0) && (den % i == 0)) {
-                    nom /= i;
-                    den /= i;
-                }
-            }
-
-            if(den === 1){
-                simplify = `${nom}`;
-            } else {
-                simplify = `${nom}/${den}`;
-            }
-
-            console.log(`${response} = ${simplify}`);
+            console.log(`${response} = ${simp}`);
             
             break;
 
@@ -78,45 +53,44 @@ for (let i = 0; i < int; i++) {
             den = (d1 * d2);
 
             response = `${nom}/${den}`;
+            simp = simplifyFrac(nom, den);
 
-            for(let i = Math.max(nom, den); i > 1; i--){
-                if ((nom % i == 0) && (den % i == 0)) {
-                    nom /= i;
-                    den /= i;
-                }
-            }
-
-            if(den === 1){
-                simplify = `${nom}`;
-            } else {
-                simplify = `${nom}/${den}`;
-            }
-
-            console.log(`${response} = ${simplify}`);
+            console.log(`${response} = ${simp}`);
             break;
 
         case '/':
-            nom = (n1 * d2);
-            den = (n2 * d1);
+            nom = Number(n1 * d2);
+            den = Number(n2 * d1);
 
             response = `${nom}/${den}`;
+            simp = simplifyFrac(nom, den);
 
-            for(let i = Math.max(nom, den); i > 1; i--){
-                if ((nom % i == 0) && (den % i == 0)) {
-                    nom /= i;
-                    den /= i;
-                }
-            }
-
-            if(den === 1){
-                simplify = `${nom}`;
-            } else {
-                simplify = `${nom}/${den}`;
-            }
-
-            console.log(`${response} = ${simplify}`);
+            console.log(`${response} = ${simp}`);
             break;
 
         default:
     };
 };
+
+function simplifyFrac(n, d){
+
+    let simplify = "";
+
+    for(let i = Math.max(n, d); i > 1; i--){
+        if ((n % i == 0) && (d % i == 0)) {
+            n /= i;
+            d /= i;
+        }
+    }
+
+    if(d === 1){
+        simplify = `${n}`;
+    } else {
+        simplify = `${n}/${d}`;
+    }
+
+    return simplify;
+};
+
+
+
