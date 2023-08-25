@@ -13,14 +13,13 @@ let int = Number(lines.shift());
 
 for (let i = 0; i < int; i++) {
 
-    let currentData = lines[i].split(/\s+/).join('');
+    let currentData = lines[i].split(/\s+/);
 
-    let n1 = Number(currentData[0]);
-    let d1 = Number(currentData[2]);
-    let n2 = Number(currentData[4]);
-    let d2 = Number(currentData[6]);
+    let n1 = parseInt(currentData[0]);
+    let d1 = parseInt(currentData[2]);
+    let n2 = parseInt(currentData[4]);
+    let d2 = parseInt(currentData[6]);
 
-    let response = "";
     let nom = null;
     let den = null;
     let simp = null;
@@ -31,20 +30,18 @@ for (let i = 0; i < int; i++) {
             nom = ((n1 * d2) + (n2 * d1));
             den = (d1 * d2);
 
-            response = `${nom}/${den}`;
             simp = simplifyFrac(nom, den);
 
-            console.log(`${response} = ${simp}`);
+            console.log(`${nom}/${den} = ${simp}`);
             break;
 
         case '-':
             nom = ((n1 * d2) - (n2 * d1));
             den = (d1 * d2);
 
-            response = `${nom}/${den}`;
             simp = simplifyFrac(nom, den);
 
-            console.log(`${response} = ${simp}`);
+            console.log(`${nom}/${den} = ${simp}`);
             
             break;
 
@@ -52,20 +49,18 @@ for (let i = 0; i < int; i++) {
             nom = (n1 * n2);
             den = (d1 * d2);
 
-            response = `${nom}/${den}`;
             simp = simplifyFrac(nom, den);
 
-            console.log(`${response} = ${simp}`);
+            console.log(`${nom}/${den} = ${simp}`);
             break;
 
         case '/':
-            nom = Number(n1 * d2);
-            den = Number(n2 * d1);
+            nom = (n1 * d2);
+            den = (n2 * d1);
 
-            response = `${nom}/${den}`;
             simp = simplifyFrac(nom, den);
 
-            console.log(`${response} = ${simp}`);
+            console.log(`${nom}/${den} = ${simp}`);
             break;
 
         default:
@@ -83,8 +78,8 @@ function simplifyFrac(n, d){
         }
     }
 
-    if(d === 1){
-        simplify = `${n}`;
+    if(d == 1){
+        simplify = `${n}/1`;
     } else {
         simplify = `${n}/${d}`;
     }
