@@ -16,20 +16,6 @@ console.log(" 1024 - encryption ");
 
 */
 
-/*
-    INPUT:
-
-    4
-    Texto #3
-    abcABC1
-    vxpdylY .ph
-    vv.xwfxo.fd
-
-    o primeiro valor indica a quantidade de strings que seram modificadas
-
-*/
-
-
 const input = `4
 Texto #3
 abcABC1
@@ -40,16 +26,15 @@ let lines = input.split('\n');
 let int = lines.shift();
 
 
-console.log(lines);
-
 for (let i = 0; i < int; i++){
 
     let line = lines[i].split('');
 
     let charCode = right(line);
-    let revert = reverse(charCode);
+    let revert = reverse(charCode).join('');
+    let response = SplitAndLeft(revert);
 
-    console.log(revert);
+    console.log(response);
 };
 
 
@@ -79,4 +64,30 @@ function right(char){
     })
 
     return response;
-}
+};
+
+// divide a string reversa em duas partes 
+// e move os caractres da segunda parte 1 posição para a esquerda
+function SplitAndLeft(str){
+    
+    let metade = Math.round(str.length / 2);
+
+    let part1 = str.slice(0, metade -1).split('');
+    let part2 = str.slice(metade).split('');
+
+    let codePart2 = part2.map(e => {
+        return e.charCodeAt();
+    });
+
+    let left = codePart2.map(item => {
+        return item - 1;
+    });
+
+    let charCode2 = left.map(i => {
+        return String.fromCharCode(i);
+    });
+
+    let response = part1.join('') + charCode2.join('');
+
+    return response;
+};
