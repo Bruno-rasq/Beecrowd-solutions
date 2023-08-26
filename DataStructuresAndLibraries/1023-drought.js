@@ -15,6 +15,8 @@ console.log(int);
 // guarda as medias de consumo por residencia
 let mediasMoradores = null;
 
+let exibicaoConsumos = '';
+
 // percorre todos as lines separandos os dados de moradores/consumo
 for(let i = 0; i < int; i++){
 
@@ -26,9 +28,12 @@ for(let i = 0; i < int; i++){
 
     mediasMoradores += consumoPorMorador;
 
+    exibicaoConsumos += `${moradores}-${Math.floor(consumoPorMorador)} `;
+
 }
 
 // guarda a media de consumo por cidade
 let MediaCidade = Math.round(mediasMoradores / int);
 
+console.log(exibicaoConsumos);
 console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3`);
