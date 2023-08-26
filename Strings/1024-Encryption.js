@@ -1,4 +1,33 @@
-console.log(" 1024 - Encryption ");
+console.log(" 1024 - encryption ");
+
+/*
+    PSEUDOCODIGO:
+        -pegar cada caso de teste
+        -dividir os caracteres da string teste.
+
+        - mover cada caracter 3 posições p/ direita no alfabeto ASCII
+            OBS: [0-9], espaço e alguns caracteres não mudam.
+        - inverter a ordem dos caracteres da string.
+
+        - dividir a string na metade
+            OBS:se não for possivel dividir em partes de tamanho igual
+            divida na metade e pegue a parte de maior tamanho
+        - troque os caracteres da parte de maior tamanho 1 posição p/ esquerda no alf ASCII
+
+*/
+
+/*
+    INPUT:
+
+    4
+    Texto #3
+    abcABC1
+    vxpdylY .ph
+    vv.xwfxo.fd
+
+    o primeiro valor indica a quantidade de strings que seram modificadas
+
+*/
 
 
 const input = `4
