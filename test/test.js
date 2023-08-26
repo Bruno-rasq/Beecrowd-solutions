@@ -16,26 +16,4 @@ const input =
 3 2
 0`;
 
-let lines = input.split('\n');
-
-// peguei todos os valores referentes a qnt de casas em cada cidade
-let intstg = lines.filter(item => {
-    return item.length == 1;
-});
-
-let ints = intstg.map(item => Number(item));
-
-
-
-
-console.log(lines);
-console.log(ints);
-
-
-
-
-
-
-
-
 

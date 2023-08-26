@@ -1,5 +1,18 @@
 console.log("1023 - drought");
 
+/*
+
+    OBS: 
+        - existe uma dificuldade em responder esta questão
+        pois não é claro como o dado de teste está estruturado
+
+        vc não sabe se é uma unica string, ou array de string´s
+        etc...
+
+        o algoritmo muda dependendo de como o dado está estruturado
+
+*/
+
 const input = `3
 3 22
 2 11
@@ -42,9 +55,7 @@ console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3`);
 
 
 
-
-
-
+// ============================= 
 
 // const input = 
 // [`3
@@ -76,4 +87,12 @@ console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3`);
 
 // };
 
-// console.log(int);
+
+// // dados de cada cidade
+// for(let inte = 0; inte < int.length; inte++){
+    
+//     let datas = lines[inte];
+    
+//     console.log(int[inte], datas)
+
+// };
