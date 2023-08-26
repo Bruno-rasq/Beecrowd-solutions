@@ -1,11 +1,13 @@
 console.log(" 1024 - Encryption ");
 
 
-const input = `4
-Texto #3
-abcABC1
-vxpdylY .ph
-vv.xwfxo.fd`;
+const input = `1
+acabate`;
+
+/*
+    resposta esperado: hwdecdc
+    minha resposta: hwdcec
+*/
 
 let lines = input.split('\n');
 let int = lines.shift();
