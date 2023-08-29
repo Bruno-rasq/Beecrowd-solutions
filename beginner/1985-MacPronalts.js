@@ -45,6 +45,3 @@ for (let i = 0; i < int; i++) {
 }
 
 console.log(response.toFixed(2));
-
-
-
