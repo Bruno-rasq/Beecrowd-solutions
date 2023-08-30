@@ -19,3 +19,10 @@ for (let i = 0; i < lines.length; i++) {
     console.log(response);
 
 };
+
+/*
+    Erro de Apresentação!
+
+    aparentemente o código já faz tudo que deveria porém, ainda continua não passando no teste
+
+*/
