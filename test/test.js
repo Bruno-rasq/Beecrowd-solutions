@@ -1,7 +1,3 @@
-console.log(" 2936 - how much cassava? ");
+console.log(" 2591 - hamekame ");
 
-
-
-
-
-
+const input = ``;
