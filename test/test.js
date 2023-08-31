@@ -1,17 +1,9 @@
-console.log(" 2137 - The Library of Mr. Severino ");
+console.log(" 2434 - Saldo do vovo ");
 
-const input = `3
-1233
-0015
-0100
-7
-0752
-1110
-0001
-6322
-8000
-6321
-0000`;
+const input = `3 1000
+100
+-800
+50`;
 
-let lines = input.trim().split('\n');
-console.log(lines)
+let lines = input.split('\n');
+
