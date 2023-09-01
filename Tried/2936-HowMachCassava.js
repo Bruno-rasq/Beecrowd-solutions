@@ -19,8 +19,8 @@ for(let i = 0; i< lines.length; i++){
 
 response += 225
 
-console.log(typeof response);
-console.log(response);
+
+console.log(response + '\n');
 
 
 /*
