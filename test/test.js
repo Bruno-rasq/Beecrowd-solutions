@@ -12,25 +12,13 @@ col = Number(col);
 
 for (let i = 0; i < lin; i++) {
 
-    let data = lines[i].split(' ');
+    let row = lines[i].split(' ');
+    console.log(row)
 
-    console.log(data)
 
-    // let life = data.filter((quest) => {
-    //     return quest.includes('V')
-    // });
-
-    // let college = data.filter((quest) => {
-    //     return quest.includes('D')
-    // });
-
-    // let V = [];
-    // let D = [];
-
-    // V.push(life);
-    // D.push(college);
-    
-    // console.log(V)
-    // console.log(D)
+    for (let n = 0; n < col; n++){
+        let col = row[n]
+        console.log(col)
+    }
 
 }
