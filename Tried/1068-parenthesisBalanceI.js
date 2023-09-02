@@ -4,7 +4,9 @@ const input = `a+(b*c)-2-a
 (a+b*(2-c)-2+a)*2 
 (a*b-(2+c) 
 2*(3-a))  
-)3+b*(2-c)(`;
+)3+b*(2-c)(
+((((
+())(()`;
 
 let lines = input.split('\n');
 
@@ -16,42 +18,87 @@ for (let i = 0; i < lines.length; i++){
         return char == "(" || char == ")"
     });
 
-    let close = parenthese.filter(char => {
+    let haveParenthese = HaveParenthesis(parenthese);
+
+    if ( haveParenthese == false ){
+        break;
+
+    } else if( haveParenthese == true ){
+
+        console.log(parenthese)
+
+        ValidByCount(parenthese);
+        ValidFormat(parenthese);
+
+        console.log(" ")
+
+    }
+
+};
+
+
+
+function HaveParenthesis(parenthese){
+    if(parenthese.length == null){
+        return false
+    } else {
+        return true
+    };
+};
+
+
+function ValidByCount(arry){
+
+    let count = 0;
+
+    for (let i = 0; i < arry.length; i++){
+
+        if(arry[i] == "(" ){
+            count++
+        } else if ( arry[i] == ")" ){
+            count--
+        }
+    };
+
+    if( count == 0 ){
+        return console.log('correct count');
+    } else {
+        return console.log('incorrect count');
+    };
+
+};
+
+function ValidFormat ( arry ){
+
+    let close = arry.filter(char => {
         return char == ")"
     });
 
-    let open = parenthese.filter(char => {
+    let open = arry.filter(char => {
         return char == "("
     });
 
-    if ( parenthese.length == null ){
-        break;
+    if ( arry.length % 2 == 0 && arry[0] == "(" && close.length == open.length ){
+        return console.log('correct format')
 
-    } else if ( parenthese.length % 2 == 0 && parenthese[0] == "("  && open.length == close.length ){
-        console.log('correct');
-
-    } else if ( parenthese[0] == ")" && parenthese.length % 2 == 0 ){
-        console.log("incorrect");
-
-    } else if ( parenthese.length % 2 !== 0 || open.length !== close.lenght){
-        console.log('incorrect');
+    } else if ( arry[0] == ")" || arry.length % 2 != 0 || close.length !== open.length){
+        return console.log('incorrect format')
     };
 
 };
 
 
 /*
-    PROBLEMA:
-        - código está fazendo o que devia porém com um erro
-
-        - se a quantidade de abertura de parenteses for igual a de fechamento
-        basicamente quer dizer que está certo mas tecnicamente não assegura que a formatação estaja tbm.
-
-        (  ( )  -> incorreto
-
-        ")" "( )" "(" -> nesse caso a qnt de abertura e fechamento é igual porem a formatação está incorreta
-
     NOTA:
-        - concertei o problema da formatação de parenteses e mesmo assim não passou no teste
+        - estou tentando modularizar algumas verificações, já que essa questão possue um infinito numero
+        de casos de teste
 
+        - [1] - quantidade de aberturas e fechamentos tem que ser igual.
+
+        - [2] - porem a formatação preecisa estar correta tbm.
+             exm : "(",  ")",  ")",  "(" quant de aberturas e fechamentos iguais porem formatação errada
+
+        - [3] - deve haver parenteses, se não deverá pular o caso de teste.
+
+        
 */
