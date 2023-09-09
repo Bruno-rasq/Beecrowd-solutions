@@ -1,4 +1,4 @@
-console.log("1023 - drought");
+cconsole.log("1023 - drought");
 
 const input = `3
 3 22
@@ -13,9 +13,14 @@ const input = `3
 2
 1 1
 3 2
+2
+1 1
+3 2
 0`;
 
 let lines = input.split('\n');
+
+// separa os interadores dos dados em duas filas
 
 let ints = [];
 for (let i = 0; i < lines.length; i++) {
@@ -24,7 +29,6 @@ for (let i = 0; i < lines.length; i++) {
     }
 };
 
-let last = ints[ints.length - 2];
 
 let data = [];
 for (let i = 0; i < lines.length; i++) {
@@ -33,12 +37,16 @@ for (let i = 0; i < lines.length; i++) {
     }
 };
 
+
+ // interage cada interador com um numero de dados
 for (n in ints) {
     if (ints[n] == 0) {
         break
 
     } else {
         console.log(`Cidade# ${Number(n)+1}:`)
+
+       // para cada interador jogue data na variavel auxiliar e exclui os mesmo de data 
         let aux = []
 
         for (let i = 0; i < ints[n]; i++) {
@@ -49,8 +57,8 @@ for (n in ints) {
             data.shift()
         };
 
-        // aux.forEach(item => console.log(item));
-
+      
+        // calcula cada consumo por morador e consumo total, exibindo-os no final.
 
         let mediasMoradores = null;
         let exibicaoConsumos = '';
@@ -71,7 +79,10 @@ for (n in ints) {
 
     }
     
-    if(ints[n] !== ints[last]){
-        console.log("");
-    } 
+    console.log("")
+    /*
+        OBS: ainda preciso consertar os espaço em branco que separa cada teste
+        de forma que todos os teste menos o ultimo e o zero(0) tenham espaço em branco antes
+        do proximo teste
+    */
 };
