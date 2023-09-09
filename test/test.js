@@ -1,63 +1,38 @@
-console.log(" 1068 - parenthesis balance I ");
+console.log(" 2137 - The Library of Mr. Severino ");
 
-const input = `a+(b*c)-2-a 
-(a+b*(2-c)-2+a)*2 
-(a*b-(2+c) 
-2*(3-a))  
-)3+b*(2-c)(`;
+const input = `3
+1233
+0015
+0100
+7
+0752
+1110
+0001
+6322
+8000
+6321
+0000`;
 
 let lines = input.split('\n');
 
-for ( let i = 0; i < lines.length; i ++ ){
-    let data = lines[i].trim().split('');
+let loops = [];
+for ( let i = 0; i< lines.length; i++ ){
 
-    let parenthese = data.filter(item => {
-        return item == "(" || item == ")";
-    });
-
-    if(parenthese.length == 0){
-        break
-
-    } else {
-
-        let countverifi = count(parenthese);
-        let FirstAndLastVerif = FirtsAndLast(parenthese);
-
-        if(countverifi == true && FirstAndLastVerif == true){
-            console.log("correct")
-        } else {
-            console.log("incorrect")
-        };
+    if(lines[i].length == 1){
+        loops.push(Number(lines[i]))
     }
- 
-}
-
-function count(data){
-    let count = 0
-
-    for (let i = 0; i < data.length; i++){
-        if(data[i] == "("){
-            count++
-        } else {
-            count--
-        }
-    };
-
-    if(count == 0){
-        return true
-    } else {
-        return false
-    }
+    
 };
 
-function FirtsAndLast(data){
+console.log(loops)
 
-    let first = data[0];
-    let last = data[data.length-1];
+let data = [];
+for ( let i = 0; i< lines.length; i++ ){
 
-    if (first == ")" || last == "("){
-        return false
-    } else {
-        return true
+    if(lines[i].length !== 1){
+        data.push(lines[i])
     }
+    
 };
+
+console.log(data)
