@@ -33,11 +33,26 @@ for ( let i = 0; i<lines.length; i++ ){
     
 };
 
-for ( n in loops){
-    data.sort()
-}
-
 data.forEach(item => console.log(item))
+
+/**
+    let aux = []
+
+    for ( n in loops){
+        for(let i = 0; i<loops[n]; i++){
+
+            if(data[i] !== undefined){
+                aux.push(data[i]) && data.shift(data[i])
+            }
+        }
+        aux.sort()
+
+        aux.forEach(item => console.log(item))
+    
+    }
+
+
+*/
 
 /*
     problemas:
