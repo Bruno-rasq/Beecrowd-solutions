@@ -61,3 +61,9 @@ function FirtsAndLast(data){
         return true
     }
 };
+
+
+/*
+    OBS: passou porem ainda não está 100% correto
+
+*/
