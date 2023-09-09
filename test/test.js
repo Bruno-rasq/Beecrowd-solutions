@@ -24,8 +24,6 @@ for ( let i = 0; i< lines.length; i++ ){
     
 };
 
-console.log(loops)
-
 let data = [];
 for ( let i = 0; i< lines.length; i++ ){
 
@@ -35,4 +33,20 @@ for ( let i = 0; i< lines.length; i++ ){
     
 };
 
-console.log(data)
+
+let resp = []
+for ( n in loops){
+    for (let i = 0; i<loops[n]; i++){
+        resp.push(data[i]) && data.shift()
+    }
+    resp.sort()
+}
+
+resp.forEach(item => console.log(item))
+
+/*
+    problemas:
+        - preciso remover o item de data que for lido na primeira interação, senão será lido novamente nas proximas
+        - como ordenar cada conjunto sem reordenas todos itens no final
+
+*/
