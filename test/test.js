@@ -16,7 +16,7 @@ const input = `3
 let lines = input.split('\n');
 
 let loops = [];
-for ( let i = 0; i< lines.length; i++ ){
+for ( let i = 0; i<lines.length; i++ ){
 
     if(lines[i].length == 1){
         loops.push(Number(lines[i]))
@@ -25,7 +25,7 @@ for ( let i = 0; i< lines.length; i++ ){
 };
 
 let data = [];
-for ( let i = 0; i< lines.length; i++ ){
+for ( let i = 0; i<lines.length; i++ ){
 
     if(lines[i].length !== 1){
         data.push(lines[i])
@@ -33,16 +33,25 @@ for ( let i = 0; i< lines.length; i++ ){
     
 };
 
+data.forEach(item => console.log(item))
 
-let resp = []
-for ( n in loops){
-    for (let i = 0; i<loops[n]; i++){
-        resp.push(data[i]) && data.shift()
+/**
+    let aux = []
+
+    for ( n in loops){
+        for(let i = 0; i<loops[n]; i++){
+
+            if(data[i] !== undefined){
+                aux.push(data[i]) && data.shift(data[i])
+            }
+        }
+        aux.sort()
+
+        aux.forEach(item => console.log(item))
+    
     }
-    resp.sort()
-}
 
-resp.forEach(item => console.log(item))
+*/
 
 /*
     problemas:
