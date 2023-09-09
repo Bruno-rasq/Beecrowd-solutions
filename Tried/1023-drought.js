@@ -1,98 +1,77 @@
 console.log("1023 - drought");
 
-/*
-
-    OBS: 
-        - existe uma dificuldade em responder esta questão
-        pois não é claro como o dado de teste está estruturado
-
-        vc não sabe se é uma unica string, ou array de string´s
-        etc...
-
-        o algoritmo muda dependendo de como o dado está estruturado
-
-*/
-
 const input = `3
 3 22
 2 11
-3 39`;
+3 39
+5
+1 25
+2 20
+3 31
+2 40
+6 70
+2
+1 1
+3 2
+0`;
 
 let lines = input.split('\n');
-let int = Number(lines.shift());
 
-console.log(int);
+let ints = [];
+for (let i = 0; i < lines.length; i++) {
+    if (lines[i].length == 1) {
+        ints.push(Number(lines[i]))
+    }
+};
 
+let last = ints[ints.length - 2];
 
+let data = [];
+for (let i = 0; i < lines.length; i++) {
+    if (lines[i].length !== 1) {
+        data.push(lines[i])
+    }
+};
 
-// guarda as medias de consumo por residencia
-let mediasMoradores = null;
+for (n in ints) {
+    if (ints[n] == 0) {
+        break
 
-let exibicaoConsumos = '';
+    } else {
+        console.log(`Cidade# ${Number(n)+1}:`)
+        let aux = []
 
-// percorre todos as lines separandos os dados de moradores/consumo
-for(let i = 0; i < int; i++){
+        for (let i = 0; i < ints[n]; i++) {
+            aux.push(data[i].split(' '))
+        };
 
-    let data = lines[i].split(/\s+/);
-    let [ moradores, consumo ] = data;
+        for (let i = 0; i < ints[n]; i++) {
+            data.shift()
+        };
 
-    // gera uma media de consumo para cada casa
-    let consumoPorMorador = (Number(consumo) / Number(moradores));
-
-    mediasMoradores += consumoPorMorador;
-
-    exibicaoConsumos += `${moradores}-${Math.floor(consumoPorMorador)} `;
-
-}
-
-// guarda a media de consumo por cidade
-let MediaCidade = Math.round(mediasMoradores / int);
-
-console.log(exibicaoConsumos);
-console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3`);
-
-
-
-
-
-// ============================= 
-
-// const input = 
-// [`3
-// 3 22
-// 2 11
-// 3 39`,
-
-// `5
-// 1 25
-// 2 20
-// 3 31
-// 2 40
-// 6 70`,
-
-// `2
-// 1 1
-// 3 2`,
-
-// `0`];
-
-// let lines = input.map(item => item.split('\n'));
-
-// // guarda os valores int, serve de loop para as cidades
-// let int = [];
-
-// for(let i = 0; i < lines.length; i++){
-
-//     int.push(Number(lines[i].shift()));
-
-// };
+        // aux.forEach(item => console.log(item));
 
 
-// // dados de cada cidade
-// for(let inte = 0; inte < int.length; inte++){
+        let mediasMoradores = null;
+        let exibicaoConsumos = '';
+
+        for (x in aux) {
+            let [moradores, consumo] = aux[x];
+            let consumoPorMorador = (Number(consumo) / Number(moradores));
+
+            mediasMoradores += consumoPorMorador;
+
+            exibicaoConsumos += `${moradores}-${Math.floor(consumoPorMorador)} `;
+        }
+
+        let MediaCidade = Math.round(mediasMoradores / ints[n]);
+
+        console.log(exibicaoConsumos);
+        console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3.`);
+
+    }
     
-//     let datas = lines[inte];
-    
-//     console.log(int[inte], datas)
-
-// };
+    if(ints[n] !== ints[last]){
+        console.log("");
+    } 
+};

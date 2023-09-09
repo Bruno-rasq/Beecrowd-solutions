@@ -1,50 +1,77 @@
-console.log(" 2137 - The Library of Mr. Severino ");
+console.log("1023 - drought");
 
 const input = `3
-1233
-0015
-0100
-7
-0752
-1110
-0001
-6322
-8000
-6321
-0000`;
+3 22
+2 11
+3 39
+5
+1 25
+2 20
+3 31
+2 40
+6 70
+2
+1 1
+3 2
+0`;
 
 let lines = input.split('\n');
 
-let loops = [];
-for ( let i = 0; i<lines.length; i++ ){
-    if(lines[i].length == 1){
-        loops.push(Number(lines[i]))
+let ints = [];
+for (let i = 0; i < lines.length; i++) {
+    if (lines[i].length == 1) {
+        ints.push(Number(lines[i]))
     }
 };
 
+let last = ints[ints.length - 2];
+
 let data = [];
-for ( let i = 0; i<lines.length; i++ ){
-    if(lines[i].length !== 1){
+for (let i = 0; i < lines.length; i++) {
+    if (lines[i].length !== 1) {
         data.push(lines[i])
     }
 };
 
+for (n in ints) {
+    if (ints[n] == 0) {
+        break
 
-let resp = []
+    } else {
+        console.log(`Cidade# ${Number(n)+1}:`)
+        let aux = []
 
-for ( n in loops){
-    let aux = []
-    for(let i = 0; i < loops[n]; i++){
-        aux.push(data[i])
-    };
-    for(let i = 0; i < loops[n]; i++){
-        data.shift()
-    };
-    aux.sort();
-    resp.push(aux);
-    aux = [];
-}
+        for (let i = 0; i < ints[n]; i++) {
+            aux.push(data[i].split(' '))
+        };
 
-resp.forEach(item => {
-    item.forEach(i => console.log(i))
-});
+        for (let i = 0; i < ints[n]; i++) {
+            data.shift()
+        };
+
+        // aux.forEach(item => console.log(item));
+
+
+        let mediasMoradores = null;
+        let exibicaoConsumos = '';
+
+        for (x in aux) {
+            let [moradores, consumo] = aux[x];
+            let consumoPorMorador = (Number(consumo) / Number(moradores));
+
+            mediasMoradores += consumoPorMorador;
+
+            exibicaoConsumos += `${moradores}-${Math.floor(consumoPorMorador)} `;
+        }
+
+        let MediaCidade = Math.round(mediasMoradores / ints[n]);
+
+        console.log(exibicaoConsumos);
+        console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3.`);
+
+    }
+    
+    if(ints[n] !== ints[last]){
+        console.log("");
+    } 
+};
