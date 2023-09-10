@@ -1,20 +1,4 @@
 console.log(" 2453 - lingua do P ");
 
-const input = `pA pppapppa pdpo pPpapppa`;
+const input = `po pppipnptpipnphpo pfpapz pppipu pppipu pa pgpaplpipnphpa pfpapz pppo pppo pe po ppprpopgprpapmpapdpopr pfpapz pppopdpe pppo pcpapfpe`;
 
-let lines = input.split('\n');
-
-let resp = '';
-
-for (n in lines) {
-    let data = lines[n].split('')
-
-    let A = data.filter(char => {
-        return char !== 'p'
-    });
-
-    resp += `${A.join('')} `
-
-}
-
-console.log(resp)
