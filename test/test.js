@@ -1,18 +1,43 @@
-console.log(" 2454 - Flipper ");
+console.log(" 2453 - lingua do P ");
 
-const input = `1 0`;
+const input = `pA pppapppa pdpo pPpapppa`;
 
-let lines = input.split(' ');
-let [ p, r ] = lines
-p = Number(p)
-r = Number(r)
+let lines = input.split('\n');
 
-if ( p == 0 ){
-    console.log("C")
-} else if ( p == 1 ){
-    if( r == 1 ){
-        console.log("A")
-    } else if ( r == 0 ){
-        console.log("B")
+let resp = '';
+
+for (n in lines) {
+    let data = lines[n].split('')
+
+    let A = data.filter(char => {
+        return char !== 'p' 
+    });
+
+    resp += `${A.join('')} `
+
+}
+
+console.log(resp)
+
+
+
+
+/*
+    OBS: funciona se não houver "P" que faça parte da palavra original
+
+    let resp = '';
+
+    for ( n in lines ){
+        let data = lines[n].split('')
+
+        let A = data.filter(char => {
+            return char !== 'p'
+        });
+
+        resp += `${A.join('')} `
+
     }
-};
+
+    console.log(resp)
+
+*/
