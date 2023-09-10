@@ -1,4 +1,5 @@
-console.log(" 2453 - lingua do P ");
+console.log(" 2457 - letras ");
 
-const input = `po pppipnptpipnphpo pfpapz pppipu pppipu pa pgpaplpipnphpa pfpapz pppo pppo pe po ppprpopgprpapmpapdpopr pfpapz pppopdpe pppo pcpapfpe`;
+const input = `j 
+jamelao`;
 
