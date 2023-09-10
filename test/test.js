@@ -1,5 +1,7 @@
-console.log(" 2457 - letras ");
+console.log(" 2464 - decifra ");
 
-const input = `j 
-jamelao`;
+const input = `iohmunlcawygdfbqpvxzerjskt
+haufhaimihbdqezihib`;
+
+let lines = input.split('\n');
 
