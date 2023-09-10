@@ -10,7 +10,7 @@ for (n in lines) {
     let data = lines[n].split('')
 
     let A = data.filter(char => {
-        return char !== 'p' 
+        return char !== 'p'
     });
 
     resp += `${A.join('')} `
@@ -18,26 +18,3 @@ for (n in lines) {
 }
 
 console.log(resp)
-
-
-
-
-/*
-    OBS: funciona se não houver "P" que faça parte da palavra original
-
-    let resp = '';
-
-    for ( n in lines ){
-        let data = lines[n].split('')
-
-        let A = data.filter(char => {
-            return char !== 'p'
-        });
-
-        resp += `${A.join('')} `
-
-    }
-
-    console.log(resp)
-
-*/
