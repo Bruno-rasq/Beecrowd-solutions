@@ -1,4 +1,5 @@
-console.log(" 1037 - Interval ");
+console.log(" 1023 - drought ");
 
-let input = ``;
+const input = ``;
+
 let lines = input.split('\n');

@@ -1,4 +1,4 @@
-cconsole.log("1023 - drought");
+console.log("1023 - drought");
 
 const input = `3
 3 22
@@ -10,9 +10,6 @@ const input = `3
 3 31
 2 40
 6 70
-2
-1 1
-3 2
 2
 1 1
 3 2
@@ -39,11 +36,9 @@ for (let i = 0; i < lines.length; i++) {
 
 
  // interage cada interador com um numero de dados
-for (n in ints) {
-    if (ints[n] == 0) {
-        break
+for (let n = 0; n<ints.length; n++) {
 
-    } else {
+    if (ints[n] !== 0) {
         console.log(`Cidade# ${Number(n)+1}:`)
 
        // para cada interador jogue data na variavel auxiliar e exclui os mesmo de data 
@@ -77,12 +72,13 @@ for (n in ints) {
         console.log(exibicaoConsumos);
         console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3.`);
 
+        //inseri um espaço em branco depois de todo item se houver um proximo item
+        if(n < ints.length-2){
+            console.log("")
+        }
+
+    } else if (ints[n] == 0) {
+        break
     }
     
-    console.log("")
-    /*
-        OBS: ainda preciso consertar os espaço em branco que separa cada teste
-        de forma que todos os teste menos o ultimo e o zero(0) tenham espaço em branco antes
-        do proximo teste
-    */
 };
