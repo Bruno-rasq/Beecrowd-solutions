@@ -1,5 +1,4 @@
-console.log(" 1583 - Making kites ");
+console.log(" 1555 - Functions ");
 
 const input = ``;
-
 let lines = input.split('\n');
