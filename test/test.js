@@ -1,4 +1,4 @@
-console.log(" 1069 - Diamonds and Sand ");
+console.log(" 1259 - Even and Odd ");
 
 const input = ``;
 
