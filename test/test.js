@@ -1,4 +1,8 @@
-console.log(" 1144 - logical sequences");
+console.log(" 1589 - Bob Conduit ");
 
-const input = `5`;
+const input = `3
+1 1
+2 8
+8 2`;
+
 let lines = input.split('\n');
