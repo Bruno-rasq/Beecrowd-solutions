@@ -1,4 +1,4 @@
-console.log(" 2416 - Corrida ");
+console.log(" 3048 - sequencia secreta ");
 
 const input = ``;
 
