@@ -1,8 +1,5 @@
-console.log(" 1589 - Bob Conduit ");
+console.log(" 2416 - Corrida ");
 
-const input = `3
-1 1
-2 8
-8 2`;
+const input = ``;
 
 let lines = input.split('\n');
