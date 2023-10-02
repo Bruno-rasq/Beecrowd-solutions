@@ -1,66 +1,35 @@
 console.log(" 1234 - Dancing Sentence ");
 
 const input = `This is a dancing sentence
-This   is         a  dancing   sentence  
+  This   is         a  dancing   sentence  
 aaaaaaaaaaa
-z`;
+z
+TUDO MAIUSCULO
+tudo minusculo`;
 
 let lines = input.split('\n');
 
-for (let i = 0; i < lines.length; i++){
+for(n in lines){
 
-    let data = lines[i].split(' ')
-    let response = DancingSentences(data)
+    let data = lines[n].split('');
 
+    let response = ''
+    let aux = 1
+    
+    for(i in data){
 
-    console.log(response)
+        if(data[i] != ' ' && aux == 1){
+            response += data[i].toUpperCase()
+            aux--
 
-}
+        } else if(data[i] != ' ' && aux == 0){
+            response += data[i].toLowerCase()
+            aux++
 
-function DancingSentences(arr){
-
-    let resp = ''
-
-    for (n in arr){
-        if(arr[n] != ' '){
-            let word = arr[n].split('');
-            let aux = 1
-
-            let A = []
-            let a = []
-            let total = 0
-
-            for(n in word){
-                A.push(word.shift().toUpperCase())
-                a.push(word.shift())
-            }
-
-            if(A > a){
-                total = A.length
-            } else {
-                total = a.length
-            }
-
-            let DancingWord = ''
-
-            for(let i = 0; i< total; i++){
-                if(A[i]){
-                    DancingWord += A[i]
-                }
-
-                if(a[i]){
-                    DancingWord += a[i]
-                }
-            }
-
-           resp += DancingWord + ' '
-
-
-        } else if (arr[n] == ' '){
-            resp += ' '
+        } else if(data[i] === ' '){
+            response += data[i]
         }
     }
 
-    return resp
-
+    console.log(response)
 };
