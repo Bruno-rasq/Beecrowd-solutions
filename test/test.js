@@ -1,19 +1,21 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 2381 - Call List ");
+console.log(" 2693 - Van ");
 
-const input = `5 3
-Maria
-João
-Carlos
-Vanessa
-Jose`;
+const input = `5
+Samuel O 1
+Fabricio L 1
+Emanuel S 3
+Kaio S 20
+Hugo N 90`;
 
 let lines = input.split('\n');
+let int = Number(lines.shift());
 
-let [students, receiver ] = lines.shift().split(' ')
-let sortedNames = lines.sort((a, b) => a.localeCompare(b))
-let receiveName = sortedNames[+receiver - 1];
+for(let i = 0; i < int; i++){
 
-console.log(receiveName);
+    let data = lines[i].split(' ')
+    console.log(data)
+
+}
