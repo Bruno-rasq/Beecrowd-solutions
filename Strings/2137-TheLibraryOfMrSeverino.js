@@ -1,6 +1,3 @@
-// let input = require('fs').readFileSync("./test/stdin", 'utf8');
-// let lines = input.split('\n');
-
 console.log(" 2137 - The Library of Mr. Severino ");
 
 const input = `3

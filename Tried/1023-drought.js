@@ -16,8 +16,7 @@ const input = `3
 0`;
 
 let lines = input.split('\n');
-
-// separa os interadores dos dados em duas filas
+let response = []
 
 let ints = [];
 for (let i = 0; i < lines.length; i++) {
@@ -35,50 +34,45 @@ for (let i = 0; i < lines.length; i++) {
 };
 
 
- // interage cada interador com um numero de dados
-for (let n = 0; n<ints.length; n++) {
+for (let n = 0; n < ints.length; n++) {
 
-    if (ints[n] !== 0) {
-        console.log(`Cidade# ${Number(n)+1}:`)
+    if (ints[n] == 0) break;
 
-       // para cada interador jogue data na variavel auxiliar e exclui os mesmo de data 
-        let aux = []
 
-        for (let i = 0; i < ints[n]; i++) {
-            aux.push(data[i].split(' '))
-        };
+    // para cada interador jogue data na variavel auxiliar e exclui os mesmo de data 
+    let aux = []
 
-        for (let i = 0; i < ints[n]; i++) {
-            data.shift()
-        };
+    for (let i = 0; i < ints[n]; i++) {
+        aux.push(data[i].split(' '))
+    };
 
-      
-        // calcula cada consumo por morador e consumo total, exibindo-os no final.
+    for (let i = 0; i < ints[n]; i++) {
+        data.shift()
+    };
 
-        let mediasMoradores = null;
-        let exibicaoConsumos = '';
 
-        for (x in aux) {
-            let [moradores, consumo] = aux[x];
-            let consumoPorMorador = (Number(consumo) / Number(moradores));
+    // calcula cada consumo por morador e consumo total, exibindo-os no final.
 
-            mediasMoradores += consumoPorMorador;
+    let mediasMoradores = null;
+    let exibicaoConsumos = [];
 
-            exibicaoConsumos += `${moradores}-${Math.floor(consumoPorMorador)} `;
-        }
+    for (x in aux) {
+        let [moradores, consumo] = aux[x];
+        let consumoPorMorador = (Number(consumo) / Number(moradores));
 
-        let MediaCidade = Math.round(mediasMoradores / ints[n]);
+        mediasMoradores += consumoPorMorador;
 
-        console.log(exibicaoConsumos);
-        console.log(`consumo medio: ${MediaCidade.toFixed(2)} m3.`);
-
-        //inseri um espaço em branco depois de todo item se houver um proximo item
-        if(n < ints.length-2){
-            console.log("")
-        }
-
-    } else if (ints[n] == 0) {
-        break
+        exibicaoConsumos[x] = `${moradores}-${Math.floor(consumoPorMorador)}`;
     }
-    
-};
+
+    let MediaCidade = Math.round(mediasMoradores / ints[n]);
+
+    response.push(
+        `Cidade# ${Number(n) + 1}:`,
+        exibicaoConsumos.join(' '),
+        `consumo medio: ${MediaCidade.toFixed(2)} m3.`,
+        ''
+    )
+}
+
+console.log(response.join('\n'))
