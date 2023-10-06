@@ -4,14 +4,16 @@ const input = `This is a dancing sentence
   This   is         a  dancing   sentence  
 aaaaaaaaaaa
 z
-TUDO MAIUSCULO
-tudo minusculo`;
+ `;
 
 let lines = input.split('\n');
+let output = []
 
 for(n in lines){
 
     let data = lines[n].split('');
+
+    if(data == null || data == ' ' || data == undefined) break;
 
     let response = ''
     let aux = 1
@@ -31,5 +33,7 @@ for(n in lines){
         }
     }
 
-    console.log(response)
+    output[n] = response
 };
+
+console.log(output.join('\n'))
