@@ -1,9 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1040 - average 3 ");
+console.log(" 1041 - Coordinates of a Point ");
 
-const input = `2.0 4.0 7.5 8.0
-6.0`;
+const input = `4.5 -2.2`;
 
-let lines = input.split('\n');
+let lines = input.split('\n')
