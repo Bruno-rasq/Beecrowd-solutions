@@ -1,8 +1,12 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1047 - Game Time with Minutes ");
+console.log(" 1110 - Throwing Cards Away ");
 
-const input = `7 10 8 9`;
+const input = `7
+19
+10
+6
+0`;
 
-let lines = input.split(' ')
+let lines = input.split('\n');
