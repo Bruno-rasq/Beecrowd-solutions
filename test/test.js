@@ -1,12 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1234 - Dancing Sentence ");
+console.log(" 1047 - Game Time with Minutes ");
 
-const input = `This is a dancing sentence
-  This   is         a  dancing   sentence  
-aaaaaaaaaaa
-z
- `;
+const input = `7 10 8 9`;
 
-let lines = input.split('\n');
+let lines = input.split(' ')
