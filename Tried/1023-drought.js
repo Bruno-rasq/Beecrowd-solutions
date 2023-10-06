@@ -16,63 +16,35 @@ const input = `3
 0`;
 
 let lines = input.split('\n');
-let response = []
 
-let ints = [];
-for (let i = 0; i < lines.length; i++) {
-    if (lines[i].length == 1) {
-        ints.push(Number(lines[i]))
-    }
-};
+let output = []
 
+for(let i = 0, city = 1; i< lines.length; i++, city++){
 
-let data = [];
-for (let i = 0; i < lines.length; i++) {
-    if (lines[i].length !== 1) {
-        data.push(lines[i])
-    }
-};
+    let int = Number(lines.shift())
+    if( int == 0 || int == '') break;
 
-
-for (let n = 0; n < ints.length; n++) {
-
-    if (ints[n] == 0) break;
-
-
-    // para cada interador jogue data na variavel auxiliar e exclui os mesmo de data 
-    let aux = []
-
-    for (let i = 0; i < ints[n]; i++) {
-        aux.push(data[i].split(' '))
-    };
-
-    for (let i = 0; i < ints[n]; i++) {
-        data.shift()
-    };
-
-
-    // calcula cada consumo por morador e consumo total, exibindo-os no final.
 
     let mediasMoradores = null;
     let exibicaoConsumos = [];
 
-    for (x in aux) {
-        let [moradores, consumo] = aux[x];
-        let consumoPorMorador = (Number(consumo) / Number(moradores));
+    for(let n = 0; n < int; n++){
+        let [ moradores, consumo ] = lines.shift().split(' ').map(el => Number(el))
+        let consumoPorMorador = Number(consumo / moradores);
 
         mediasMoradores += consumoPorMorador;
 
-        exibicaoConsumos[x] = `${moradores}-${Math.floor(consumoPorMorador)}`;
+        exibicaoConsumos[n] = `${moradores}-${Math.floor(consumoPorMorador)}`;
     }
 
-    let MediaCidade = Math.round(mediasMoradores / ints[n]);
+    let MediaCidade = (mediasMoradores / int).toFixed(2);
 
-    response.push(
-        `Cidade# ${Number(n) + 1}:`,
+    output.push(
+        `Cidade# ${city}:`,
         exibicaoConsumos.join(' '),
-        `consumo medio: ${MediaCidade.toFixed(2)} m3.`,
+        `Consumo medio: ${MediaCidade} m3.`,
         ''
     )
-}
+};
 
-console.log(response.join('\n'))
+console.log(output.join('\n'))
