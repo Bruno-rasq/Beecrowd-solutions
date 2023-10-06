@@ -1,26 +1,9 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 2518 - FNDI's Staircase ");
+console.log(" 1040 - average 3 ");
 
-const input = `4
-3 4 30`;
+const input = `2.0 4.0 7.5 8.0
+6.0`;
 
-let lines = input.split('\n').map((line) => line.split(" ", 3).map((value) => Number.parseInt(value, 10)));
-
-let calcRampArea = (d, h, c, l) => (Math.hypot(h, c) * d * l) * 1e-4;
-
-const output = []
-
-for (let i = 0; i < lines.length; i += 2) {
-    const [N] = lines[i + 0]
-
-    if (isNaN(N)) break // EOF
-
-    const [H, C, L] = lines[i + 1]
-    const area = calcRampArea(N, H, C, L)
-
-    output.push(area.toFixed(4))
-}
-
-console.log(output.join("\n"));
+let lines = input.split('\n');
