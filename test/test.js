@@ -1,8 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 3299 - Small Unlucky Numbers ");
+console.log(" 1258 - T-shirt ");
 
-const input = `12321`;
+const input = ``;
 
-let lines = input.split('\n')
+let lines = input.split('\n');
