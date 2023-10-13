@@ -3,6 +3,13 @@
 
 console.log(" 1052 - Months ");
 
-const input = `4`;
+const input = `3
+5 3
+8 2
+5 6
+2
+3 5
+11 10
+0`;
 
-let lines = input.split('\n');
+let lines = input.trim().split('\n');
