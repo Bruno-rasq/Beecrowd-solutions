@@ -1,8 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1142 - PUM ");
+console.log(" 1215 - Andy's First Dictionary ");
 
-const input = `7`;
+const input = ``;
 
-let lines = input.split('\n');
+let lines = input.trim().split("\n")
