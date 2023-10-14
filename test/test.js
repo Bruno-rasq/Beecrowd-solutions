@@ -1,9 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 2375 - sedex ");
+console.log(" 1060 - Positive Numbers ");
 
-const input = `3
-2 3 5`;
+const input = ``;
 
-let lines = input.split('\n');
+let lines = input.split('\n')
