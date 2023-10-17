@@ -1,6 +1,3 @@
-// let input = require('fs').readFileSync("./test/stdin", 'utf8');
-// let lines = input.split('\n');
-
 console.log(" 3467 - This is my place ");
 
 const input = `xxL
