@@ -1,8 +1,7 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1215 - Andy's First Dictionary ");
+console.log(" 3454 - Alice in Noughts and Crosses Wonderland ");
 
 const input = ``;
-
-let lines = input.trim().split("\n")
+let lines = input.split('\n');
