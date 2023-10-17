@@ -1,7 +1,7 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 3454 - Alice in Noughts and Crosses Wonderland ");
+console.log(" 3468 - Do more, but do better!");
 
-const input = ``;
+const input = `INTENSIDADE`;
 let lines = input.split('\n');
