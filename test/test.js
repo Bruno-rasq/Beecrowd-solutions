@@ -1,7 +1,7 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 3468 - Do more, but do better!");
+console.log(" 3469 - In site");
 
-const input = `INTENSIDADE`;
+const input = ``;
 let lines = input.split('\n');
