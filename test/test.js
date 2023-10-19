@@ -1,7 +1,7 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1171 - Number Frequence ");
+console.log(" 1064 - Positives and Average ");
 
 const input = ``;
 
