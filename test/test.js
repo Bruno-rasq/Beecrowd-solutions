@@ -1,8 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 2338 - Morse ");
+console.log(" 3475 - converter ");
 
 const input = ``;
 
-let lines = input.trim().split("\n");
+let lines = input.split("\n");
