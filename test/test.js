@@ -1,8 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1234 - Dancing Sentence ");
+console.log(" 1120 - Contract Revision");
 
 const input = ``;
 
-let lines = input.trim().split('\n')
+let lines = input.split('\n')
