@@ -1,8 +1,8 @@
 // let input = require('fs').readFileSync("./test/stdin", 'utf8');
 // let lines = input.split('\n');
 
-console.log(" 1581 - International Chat ");
+console.log("1023 - drought");
 
 const input = ``;
 
-let lines = input.split("\n");
+let lines = input.trim().split('\n');
