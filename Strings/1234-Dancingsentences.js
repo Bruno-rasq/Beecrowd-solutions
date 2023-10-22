@@ -6,6 +6,33 @@ aaaaaaaaaaa
 z
  `;
 
+
+let lines = input.trim().split('\n');
+
+while(lines.length){
+    let sentence = lines.shift()
+
+    let maiuscula = true
+    let response = sentence.split('').map((x) => {
+        let letra = x
+
+        if(/[A-Za-z]/.test(x)){
+            if(maiuscula){
+                letra = letra.toUpperCase();
+            } else {
+                letra = letra.toLowerCase();
+            }
+            maiuscula = !maiuscula
+        }
+
+        return letra
+    }).join('')
+
+    console.log(response)
+}
+
+/*
+ ERRO: 
 let lines = input.split('\n');
 let output = []
 
@@ -37,3 +64,4 @@ for(n in lines){
 };
 
 console.log(output.join('\n'))
+*/
