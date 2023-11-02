@@ -8,7 +8,7 @@
 
 
 ## License 
-![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
+![License](https://img.shields.io/github/license/)
 
 Repositório criado para guardar minhas soluções das questões de algoritmo da Plataforma Beecrowd
 enquanto Estudo/Treino algoritmo, estruturas de dados e a linguagem Javascript...
