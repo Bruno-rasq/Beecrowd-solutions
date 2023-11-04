@@ -14,18 +14,19 @@ Repositório criado para guardar minhas soluções das questões de algoritmo da
 enquanto Estudo/Treino algoritmo, estruturas de dados e a linguagem Javascript...
 
 
-## Solutions
+## Categories
 
-| CATEGORY                                                                                                     | DESCRIPTION                                                  | PROBLEMS |
+| CATEGORY                       | DESCRIPTION                                                  | PROBLEMS |
 | :----------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------: |
-| [Beginner](https://github.com/Bruno-rasq/javascript-beecrowd-problems/beginner)                       | Basic problems for anyone who has just started to program... |   336    |
-| [Ad-Hoc](https://github.com/Bruno-rasq/javascript-beecrowd-problems/Ad-Hoc)                            | Simulation Problems, Dates, Games and general Ad-Hoc...      |   771    |
-| [Strings](https://github.com/Bruno-rasq/javascript-beecrowd-problems/Strings)                         | Palindromes, Frequency, Ad-Hoc, LCS, String Manipulation...  |   148    |
-| [Data Structures and Libraries](https://github.com/Bruno-rasq/javascript-beecrowd-problems/DataStructuresAndLibraries) | Queue, Stack, Sort, Map, Set...                              |   179    |
-| [Mathematics](https://github.com/Bruno-rasq/javascript-beecrowd-problems/Mathematics)                       | Number Theory, Prime Numbers, Combinatorics, BigInteger...   |   269    |
-| [Graph](https://github.com/Bruno-rasq/javascript-beecrowd-problems/Graph)                            | Flood Fill, MST, SSSP, DAG, Maximum Flow, Tree...            |   277    |
-| [Computational Geometry](https://github.com/Bruno-rasq/javascript-beecrowd-problems/ComputacionaalGeometry)         | Points and Lines, Polygon...                                 |    82    |
-| [SQL](https://github.com/Bruno-rasq/javascript-beecrowd-problems/sql)                                | query languages: select, insert, update, create ...  | 50  |
+| Beginner                       | Basic problems for anyone who has just started to program... |   336    |
+| Ad-Hoc                         | Simulation Problems, Dates, Games and general Ad-Hoc...      |   850    |
+| Strings                        | Palindromes, Frequency, Ad-Hoc, LCS, String Manipulation...  |   148    |
+| Data Structures and Libraries  | Queue, Stack, Sort, Map, Set...                              |   179    |
+| Mathematics                    | Number Theory, Prime Numbers, Combinatorics, BigInteger...   |   269    |
+| Graph                          | Flood Fill, MST, SSSP, DAG, Maximum Flow, Tree...            |   277    |
+| Computational Geometry         | Points and Lines, Polygon...                                 |    83    |
+| SQL                            | query languages: select, insert, update, create ...          |    50    |
+| Paradigms                      | Dynamic programming, binary searching, backtracking...       |   215    |
 
 
 ## Ferramentas
