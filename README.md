@@ -29,10 +29,9 @@ enquanto Estudo/Treino algoritmo, estruturas de dados e a linguagem Javascript..
 | Paradigms                      | Dynamic programming, binary searching, backtracking...       |   215    |
 
 
-## Ferramentas
+## linguagens
 
 <div align='center'>
-    <img src='https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black'></img>
-    <img src='https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white'></img>
-    <img src='https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white'></igm>
+    <img src='https://img.shields.io/badge/TypeScript-%23181717?style=flat-square&logo=typescript'></img>
+       <img src='https://img.shields.io/badge/JavaScript-%23181717?style=flat-square&logo=javascript'></img>
 </div>
