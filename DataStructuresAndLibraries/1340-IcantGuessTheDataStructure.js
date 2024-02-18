@@ -1,150 +1,140 @@
-const input = `6
-1 1
-1 2
-1 3
-2 1
-2 2
-2 3
-6
-1 1
-1 2
-1 3
-2 3
-2 2
-2 1
-2
-1 1
-2 2
-4
-1 2
-1 1
-2 1
-2 2
-7
-1 2
-1 5
-1 1
-1 3
-2 5
-1 4
-2 4`
-  
+const input = require('fs').readFileSync('/dev/stdin', 'utf8');
 const lines = input.split('\n')
 
-// const input = require('fs').readFileSync('/dev/stdin', 'utf8');
-// const lines = input.split('\n')
+// -------------  ESTRUTURAS DE DADOS ----------------
+
+// stack: first-in, last-out
+// queue: first-in, first-out
+// priority-queue: maxvalues-first-out
+// not sure: queue | stack | priority
+// impossible: !queue && !stack && !priority
 
 class DataStructure {
 
-    protected elements: number[] = []
+    constructor(){
+        this.elements = [] 
+        this.booleanRemoved = [] 
+    }
 
-    isEmpty(): boolean{
+    isEmpty(){
         return this.elements.length === 0
     }
 
-    throw_in(val: number): void{
+    throw_in(val){
         this.elements.push(val)
+    }
+
+    compare(){
+        return this.booleanRemoved.every(valor => valor === 1)
     }
 }
 
 class Queue extends DataStructure {
 
-    take_out(value: number): void {
+    take_out(value) {
         if(!this.isEmpty()){
             if(value == this.elements[0]){
                 this.elements = this.elements.filter(element => element !== value)
+                this.booleanRemoved.push(1)
+                return
             }
+            this.booleanRemoved.push(0)
         }
     }
 }
 
 class Stack extends DataStructure {
 
-    take_out(value: number): void {
+    take_out(value){
         if(!this.isEmpty()){
             if(value == this.elements[this.elements.length - 1]){
                 this.elements = this.elements.filter(element => element !== value)
+                this.booleanRemoved.push(1)
+                return
             }
+            this.booleanRemoved.push(0)
         }
     }
 }
 
 class Priority_queue extends DataStructure {
 
-    take_out(value: number): void {
+    take_out(value){
         if(!this.isEmpty()){
             let max = Math.max(...this.elements)
             if(value == max){
                 let index = this.elements.indexOf(max)
                 this.elements = this.elements.filter(element => element != this.elements[index])
+                this.booleanRemoved.push(1)
+                return
             }
+            this.booleanRemoved.push(0)
         }
     }
+
 }
 
-Setup_data_structure(lines)
 
-function Setup_data_structure(arr: string[]): void{
+// run code...
+Main(lines)
+
+
+function Main(arr){
 
     while(arr.length){
 
         let int = Number(arr.shift())
-        let Data: any[] = []
+        let Data = []
+
+        if(int === 0) break
 
         for(let i = 0; i < int; i++){
-            let num = arr.shift()
-            Data.push(num)
+            Data.push(String(arr.shift()))
         }
 
         i_can_guess_the_data_structure(Data)
     }
 }
 
-// 1 throw In || 2 take out
-
-// stack first-in, last-out
-// queue first-in, first-out
-// priority-queue maxvalues-first-out
-// not sure queue | stack | priority
-// impossible !queue && !stack && !priority
-
-function i_can_guess_the_data_structure(list: string[]): void {
+function i_can_guess_the_data_structure(list){
 
     let stack = new Stack();
     let queue = new Queue();
     let priority = new Priority_queue();
 
-    function add(val: number){
+
+    function add(val){
         stack.throw_in(val)
         queue.throw_in(val)
         priority.throw_in(val)
     }
 
-    function remove(val: number){
+    function remove(val){
         stack.take_out(val)
         queue.take_out(val)
         priority.take_out(val)
     }
-    
-    list.forEach(element => {
-        let [ command, value ] = element.split(' ')
-        
-        Number(command) == 1 ? add(Number(value)) : remove(Number(value))
-    })
 
-    response([stack.isEmpty(), queue.isEmpty(), priority.isEmpty()])
+    for(let i = 0; i < list.length; i++){
+        let [ command, value ] = list[i].split(' ').map(el => Number(el))
+
+        // 1 throw In || 2 take out
+        command == 1 ? add(value) : remove(value)
+    }
+
+    OUTPUT([stack.compare(), queue.compare(), priority.compare()])
 }
 
-function response(arr: boolean[]): void {
+function OUTPUT(arr){
 
     let dataStructure = ['stack', 'queue', 'priority queue']
     let countTrue = arr.filter(el => el).length;
 
-    if(countTrue > 1 && countTrue !== 3){
-        console.log('not sure')
-
-    } else if (countTrue == 3 || countTrue == 0){
+    if(countTrue == 0){
         console.log('impossible')
+
+    } else if (countTrue > 1){
+        console.log('not sure')
 
     } else {
         let index = arr.indexOf(true)
