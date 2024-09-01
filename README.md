@@ -11,10 +11,10 @@
 ![License](https://img.shields.io/github/license/Bruno-rasq/javascript-beecrowd-problems)
 
 Repositório criado para guardar minhas soluções das questões de algoritmo da Plataforma Beecrowd
-enquanto Estudo/Treino algoritmo, estruturas de dados e a linguagem Javascript...
+enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 
 
-## Categories
+## Categorias
 
 | CATEGORY                       | DESCRIPTION                                                  | PROBLEMS |
 | :----------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------: |
@@ -29,9 +29,20 @@ enquanto Estudo/Treino algoritmo, estruturas de dados e a linguagem Javascript..
 | Paradigms                      | Dynamic programming, binary searching, backtracking...       |   215    |
 
 
-## linguagens
+## templates exemplos:
 
-<div align='center'>
-    <img src='https://img.shields.io/badge/TypeScript-%23181717?style=flat-square&logo=typescript'></img>
-       <img src='https://img.shields.io/badge/JavaScript-%23181717?style=flat-square&logo=javascript'></img>
-</div>
+javascript:
+```javascript
+let input = require('fs').readFileSync("./test/stdin", 'utf8');
+let lines = input.split('\n');
+
+// code
+```
+
+typescript:
+```typescript
+const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+const lines = input.split('\n')
+
+// code
+```
