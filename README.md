@@ -31,17 +31,11 @@ enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 
 ## templates exemplos:
 
-javascript:
-```javascript
-let input = require('fs').readFileSync("./test/stdin", 'utf8');
-let lines = input.split('\n');
 
-// code
-```
-
-typescript:
+typescript | javascript:
 ```typescript
-const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+const fs = require('fs')
+const input = fs.readFileSync('/dev/stdin', 'utf8');
 const lines = input.split('\n')
 
 // code
