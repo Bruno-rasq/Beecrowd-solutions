@@ -1,13 +1,12 @@
 <?php
 
-$code = trim(fgets( STDIN ));
-$qnt = trim(fgets( STDIN ));
+    list($code, $amount) = explode(" ", readline());
+    $code = (int) $code;
+    $amount = (float) $amount;
 
-$menu = [4.00, 4.50, 5.00, 2.00, 1.50];
-$total = ($menu[$code-1]) * $qnt;
+    $menu = [4.00, 4.50, 5.00, 2.00, 1.50];
+    $total = $menu[$code - 1] * $amount;
 
-echo "Total: R$ " . number_format($total, 2, '.', '');
+    echo "Total: R$ " . number_format($total, 2, '.', '');
 
 ?>
-
-//ta dando erro no site... pq? não sei...
