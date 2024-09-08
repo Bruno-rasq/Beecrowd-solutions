@@ -1,3 +1,5 @@
+const fs = require('fs')
+const input = fs.readFileSync('/dev/stdin', 'uft-8')
 let [A, B, C] = input.split(" ").map(item => parseFloat(item));
 
 let AreaTring = (A * C) / 2.0;
