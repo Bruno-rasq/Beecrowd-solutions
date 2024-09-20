@@ -7,9 +7,6 @@
 </div>
 
 
-## License 
-![License](https://img.shields.io/github/license/Bruno-rasq/javascript-beecrowd-problems)
-
 Repositório criado para guardar minhas soluções das questões de algoritmo da Plataforma Beecrowd
 enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 
