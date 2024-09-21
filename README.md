@@ -32,7 +32,7 @@ enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 typescript | javascript:
 ```typescript
 const fs = require('fs')
-const input = fs.readFileSync('/dev/stdin', 'utf8');
+const input = fs.readFileSync('/dev/stdin', 'utf8')
 const lines = input.split('\n')
 
 // code
