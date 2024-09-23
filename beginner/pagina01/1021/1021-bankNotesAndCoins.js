@@ -1,4 +1,5 @@
-
+const fs = require("fs")
+const input = fs.readFileSync("/dev/stdin", 'utf-8')
 let n = input.split(" ").map(item => parseFloat(item));
 
 
@@ -52,4 +53,3 @@ console.log(`${cent25.toFixed(0)} moeda(s) de R$ 0.25`);
 console.log(`${cent10.toFixed(0)} moeda(s) de R$ 0.10`);
 console.log(`${cent5.toFixed(0)} moeda(s) de R$ 0.05`);
 console.log(`${cent1.toFixed(0)} moeda(s) de R$ 0.01`);
-

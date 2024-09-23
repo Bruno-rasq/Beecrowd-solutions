@@ -1,6 +1,6 @@
-console.log(" 1035 - select test 1 ");
-
-let input = `5 6 7 8`;
+const { listenerCount } = require("events");
+const fs = require("fs")
+const input = fs.readFileSync("/dev/stdin", "utf-8")
 let lines = input.split(' ');
 
 let A = Number(lines[0])

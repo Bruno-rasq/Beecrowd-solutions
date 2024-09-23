@@ -1,9 +1,5 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf-8")
-let lines = input.split(' ');
-
-let A = parseFloat(lines[0])
-let B = parseFloat(lines[1])
-let C = parseFloat(lines[2])
+let [A, B, C] = input.split(' ').map(Number);
 
 //x = (-b ± √(b² – 4ac)) / (2a) 
 let delta = (B*B) - (4*A*C);
