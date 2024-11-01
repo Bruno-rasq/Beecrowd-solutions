@@ -76,3 +76,12 @@ b = int(input())
 print(a + b)
 
 ```
+
+php:
+```php
+
+<?php
+	//code
+?>
+
+```
