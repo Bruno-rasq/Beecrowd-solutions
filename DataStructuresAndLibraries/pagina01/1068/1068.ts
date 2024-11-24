@@ -26,7 +26,7 @@ for ( let i = 0; i < lines.length; i ++ ){
  
 }
 
-function count(data){
+function count(data: string[]): boolean {
     let count = 0
 
     for (let i = 0; i < data.length; i++){
@@ -44,7 +44,7 @@ function count(data){
     }
 };
 
-function FirtsAndLast(data){
+function FirtsAndLast(data: string): boolean {
 
     let first = data[0];
     let last = data[data.length-1];
@@ -55,9 +55,3 @@ function FirtsAndLast(data){
         return true
     }
 };
-
-
-/*
-    OBS: passou porem ainda não está 100% correto
-
-*/
