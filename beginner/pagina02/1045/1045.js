@@ -1,17 +1,17 @@
 const input = require('fs').readFileSync('/dev/stdin', 'utf8');
-const lines = input.split(' ').map((item: string) => Number(item));
+const lines = input.split(' ').map(Number);
 
 let sortedArray = [...lines].sort((a, b) => b - a)
 
 
-const Main = (arr: number[]): void => {
+const Main = (arr) => {
 
     let [ a, b, c ] = arr
 
     let a2 = Math.pow(a, 2) 
     let bc2 = (Math.pow(b, 2) + Math.pow(c, 2))
 
-    let response: string[] = []
+    let response = []
 
     if(a >= (b + c)){
        response.push(`NAO FORMA TRIANGULO`) 

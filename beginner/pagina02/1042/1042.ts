@@ -1,4 +1,4 @@
-const fs = require("fs")
+import * as fs from "fs"
 const input = fs.readFileSync("/dev/stdin", "utf8")
 let lines = input.split(' ').map(el => Number(el));
 

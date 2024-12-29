@@ -14,5 +14,3 @@ if ( A < (B + C) && B < ( A + C) && C < (A + B)){
 } else {
     console.log(`Area = ${area.toFixed(1)}`)
 };
-
-//exem Input : 6.0 4.0 2.1
