@@ -1,6 +1,6 @@
 # Beecrowd-Solutions JS
 
-<div align = 'center'>
+<div align = 'center' margin-bottom = "100px" >
     <a href='https://www.beecrowd.com.br/' target='_blank'>
         <img src='https://www.beecrowd.com.br/judge/img/5.0/logo-beecrowd.png' height='auto'/>
     </a>
@@ -10,6 +10,12 @@
 Repositório criado para guardar minhas soluções das questões de algoritmo da Plataforma Beecrowd
 enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 
+Nova meta: top 100 do rank global (objetivo futil mas me mantem focado).
+
+RANK ATUAL: 264
+PONTOS: 3,703.12
+RESOLVIDOS: 408
+ACERTOS: 1000+
 
 ## Categorias
 
@@ -84,4 +90,20 @@ php:
 	//code
 ?>
 
+```
+
+rust:
+````rust 
+use std::io;
+
+fn main() {
+
+	let mut input = String::new();
+
+	io::stdin().read_line(&mut input).unwrap();
+
+	let n: u32 = input.trim().parse::<u32>().unwrap();
+
+	orintln!("{}", n);
+}
 ```
