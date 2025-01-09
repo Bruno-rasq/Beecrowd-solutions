@@ -12,10 +12,10 @@ enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 
 Nova meta: top 100 do rank global (objetivo futil mas me mantem focado).
 
-RANK ATUAL: 264
-PONTOS: 3,703.12
-RESOLVIDOS: 408
-ACERTOS: 1000+
+RANK ATUAL: 264</br>
+PONTOS: 3,703.12</br>
+RESOLVIDOS: 408</br>
+ACERTOS: 1000+</br>
 
 ## Categorias
 
