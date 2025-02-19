@@ -1,8 +1,5 @@
-console.log(" 1026 - To Carry or not to Carry ");
-
-const input = `4 6
-6 9`;
-
+const fs = require("fs");
+const input = fs.readFileSync("/dev/stdin", "utf8");
 let lines = input.split('\n');
 
 let arr = new Uint32Array(3);
