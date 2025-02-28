@@ -1,8 +1,7 @@
-const fs = require("fs")
+import * as fs from "fs"
 const input = fs.readFileSync("/dev/stdin", "utf8")
-
-let lines = input.split('\n');
-let int = Number(lines.shift());
+let lines = input.split("\n")
+let int = Number(lines.shift())
 
 for(let i = 0; i < int; i++){
 
