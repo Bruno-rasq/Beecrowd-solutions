@@ -12,6 +12,6 @@ enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
 
 Nova meta: top 100 do rank global (objetivo futil mas me mantem focado).
 
-RANK ATUAL: 195</br>
-PONTOS: 4,440.54</br>
+RANK ATUAL: 183</br>
+PONTOS: 4,635.22</br>
 LINGUAGENS: javascript, typescript, c++, java, python, php, rust, sql.
