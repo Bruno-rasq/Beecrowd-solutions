@@ -7,11 +7,10 @@
 </div>
 
 
-Repositório criado para guardar minhas soluções das questões de algoritmo da Plataforma Beecrowd
-enquanto Estudo/Treino algoritmo, estruturas de dados e sql...
+## A jornada do Heroi.
 
-Nova meta: top 100 do rank global (objetivo futil mas me mantem focado).
+há mais ou menos uns 2 anos me vi preso em um codigo simples de javascript que não conseguia entender, eu
+precisava praticar mas não sabia aonde, foi quando um amigo me recomendou usar a plataforma Beecrowd (antigo URI Online jugde). Deste então venho praticando respondendo questões e desenvolvendo um pensamento lógico.
 
-RANK ATUAL: 183</br>
-PONTOS: 4,635.22</br>
-LINGUAGENS: javascript, typescript, c++, java, python, php, rust, sql.
+Praticando quase todos os dias, 576 questões diferentes de categorias diferentes, desde um simples "Hello World" (1000)
+até problemas mais complexos me fizeram sentir que em algum grau houve uma evolução.

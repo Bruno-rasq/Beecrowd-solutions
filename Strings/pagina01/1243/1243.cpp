@@ -55,4 +55,4 @@ int main () {
         cout << (media <= 3 ? 250 : (media > 3 && media <= 5 ? 500 : 1000)) << endl;
     }
     return 0;
-}
+} 
