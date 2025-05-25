@@ -7,7 +7,7 @@ const table_salary_readjustment_rate: number[][] = [
     [400.01,    800.00,         12],
     [800.01,    1200.00,        10],
     [1200.01,   2000.00,        7],
-    [2000.01,   Infinity,   4],
+    [2000.01,   Infinity,       4],
 ]
 
 for(const line of table_salary_readjustment_rate){
