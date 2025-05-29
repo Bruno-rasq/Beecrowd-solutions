@@ -18,8 +18,9 @@ Coisas que aprendi:
 
     -- estruturas de dados: filas, pilhas, arrays, matrizes, vetores, hash_tables, arvores, filas prioritarias, set, classes ...
     -- algoritmos: algoritmos de busca (DFS, BFS, Busca binaria), de ordenação(bubble sort, quick sort, conting sort, merge sorte, selection sort, insertion sort ...)
-    -- tecnicas: sliding window, contagem de frequencia, recursão, swap.
+    -- tecnicas: sliding window, contagem de frequencia, recursão, swap, greedy
     -- complexidas: notação big O (O(1), O(n), O(log n), O(n + k), O(n^2)...)
+    -- linguagens: python, c++, javascript, typescript, java, php, rust, sql.
     
 
 Claro, eu não fiz tudo isso sozinho. em muitos momento precisei de ajuda, lendo a respostas de outras pessoa, foruns,
