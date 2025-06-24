@@ -1,34 +1,15 @@
-const input_3357 = `3 3.5 0.3
-Maria Juca Bob`
+import * as  fs from "fs"
 
-//const fs = require('fs')
-//const input = fs.readFileSync('/dev/stdin', 'utf-8')
-const lines_3357 = input_3357.split('\n')
+const input = fs.readFileSync("/dev/stdin", "utf8").split("\n")
 
-const current_data = () => String(lines_3357.shift())
-const to_list = (data: string) => data.split(' ')
+let [qnt_amigos, litros, refil] = input[0].split(" ").map(Number)
+let lista_amigos = input[1].split(" ")
+let index = 0
 
-function ListaCircular(list: string[]) {
-  let nomes = list
-  let index = 0 
-  return () => {
-    let nome = nomes[index]
-    index = (index + 1) % nomes.length
-    return nome
-  }
+while (litros > refil){
+    litros -= refil
+    index = (index + 1) % qnt_amigos
 }
 
-let [p, litros, cabaca ] = to_list(current_data()).map(Number)
-const nomes = to_list(current_data())
-
-const lista_circular = ListaCircular(nomes) 
-
-let rico = ''
-while (litros >= cabaca){
-  litros -= cabaca
-  rico = lista_circular()
-}
-
-rico = lista_circular()
-
+const rico = lista_amigos[index]
 console.log(`${rico} ${litros.toFixed(1)}`)
