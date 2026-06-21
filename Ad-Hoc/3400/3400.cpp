@@ -15,7 +15,7 @@ long long derangement(long long n){
     }
     return b;
 }
-
+ 
 int main () {
     int n;
     cin >> n;

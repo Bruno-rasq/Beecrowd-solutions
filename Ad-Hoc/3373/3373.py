@@ -1,4 +1,4 @@
-#OBS: há uma falha de apresentação na questão que não consegui resolver.
+import sys 
 
 def aligning_the_rings(CS, unlocking_word, criptex):
     for i in range(CS):
@@ -37,7 +37,7 @@ class Da_Vincis_Cryptex:
         column          = define_correct_column(aligned_cryptex, char, ring)
         msg             = decrypt_secret_word(aligned_cryptex, column)
         
-        print(unlocking_word + " " + msg)
+        sys.stdout.write(f"{unlocking_word} {msg}\r\n")
 
 n_test_cases = int(input())
 for case in range(n_test_cases):
