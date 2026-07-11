@@ -1,14 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-typedef unsigned long long LONG;
 
 int main(){
-
-    LONG a, b;
+    uint64_t a, b;
     while(cin >> a >> b){
-        LONG result = a ^ b;
-        cout << result << endl;
+        int64_t c = a ^ b; // XOR
+        cout << c << "\n";
     }
-
-    return 0;
 }
