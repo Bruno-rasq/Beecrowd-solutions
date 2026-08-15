@@ -12,7 +12,7 @@
 há mais ou menos uns 2 anos me vi preso em um codigo simples de javascript que não conseguia entender, eu
 precisava praticar mas não sabia aonde, foi quando um amigo me recomendou usar a plataforma Beecrowd (antigo URI Online jugde). Deste então venho praticando respondendo questões e desenvolvendo meu pensamento lógico.
 
-Praticando quase todos os dias, 609 questões (ou mais) diferentes de categorias diferentes, desde um simples "Hello World" (1000) até problemas mais complexos me fizeram sentir que em algum grau houve uma evolução.
+Praticando quase todos os dias, +1000 questões (ou mais) diferentes de categorias diferentes, desde um simples "Hello World" (1000) até problemas mais complexos me fizeram sentir que em algum grau houve uma evolução.
 
 Coisas que aprendi:
 

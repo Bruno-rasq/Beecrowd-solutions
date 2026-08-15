@@ -1,33 +1,59 @@
-from collections import deque
+import sys
 
-class Colouring_Game_Scenarios:
-    def __init__(self):
-        self.r, self.c = [int(x) for x in input().split()]
-        self.scenario = [list(input().strip()) for _ in range(self.r)]
-        self.colored_areas = 0
+data = sys.stdin.buffer.read().splitlines()
 
-        for i in range(self.r):
-            for j in range(self.c):
-                if self.scenario[i][j] == ".":
-                    self.BFS(i, j)
-                    self.colored_areas += 1
-                    
-        print(self.colored_areas)
+n, m = map(int, data[0].split())
 
-    def BFS(self, x, y):
-        queue = deque()
-        queue.append((x, y))
-        self.scenario[x][y] = "o"
+W = m + 2
+H = n + 2
 
-        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+# '#' = 35
+# '.' = 46
+# 'o' = 111
 
-        while queue:
-            cx, cy = queue.popleft()
-            for dx, dy in directions:
-                nx, ny = cx + dx, cy + dy
-                if 0 <= nx < self.r and 0 <= ny < self.c:
-                    if self.scenario[nx][ny] == ".":
-                        self.scenario[nx][ny] = "o"
-                        queue.append((nx, ny))
+grid = bytearray(b'#' * (W * H))
 
-response = Colouring_Game_Scenarios()
+for i in range(n):
+    ini = (i + 1) * W + 1
+    grid[ini:ini + m] = data[i + 1]
+
+areas = 0
+
+for r in range(1, n + 1):
+    base = r * W
+    for c in range(1, m + 1):
+        idx = base + c
+
+        if grid[idx] == 46:
+            areas += 1
+            grid[idx] = 111
+
+            queue = [idx]
+            head = 0
+            append = queue.append
+
+            while head < len(queue):
+                p = queue[head]
+                head += 1
+
+                q = p - W
+                if grid[q] == 46:
+                    grid[q] = 111
+                    append(q)
+
+                q = p + W
+                if grid[q] == 46:
+                    grid[q] = 111
+                    append(q)
+
+                q = p - 1
+                if grid[q] == 46:
+                    grid[q] = 111
+                    append(q)
+
+                q = p + 1
+                if grid[q] == 46:
+                    grid[q] = 111
+                    append(q)
+
+print(areas)
